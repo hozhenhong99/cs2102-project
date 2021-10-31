@@ -357,7 +357,7 @@ CREATE OR REPLACE FUNCTION contact_tracing
 RETURNS TABLE(eid INTEGER) AS $$
 DECLARE has_fever BOOLEAN
 BEGIN
-    has_fever = SELECT fever FROM Health_Declaration WHERE eid = e_id;
+    has_fever = GET fever FROM Health_Declaration WHERE eid = e_id;
     IF has_fever = 0 THEN RETURN;
     END IF;
 
