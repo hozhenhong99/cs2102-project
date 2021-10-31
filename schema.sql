@@ -321,3 +321,4 @@ CREATE TRIGGER a_resigned_employee_cannot_approve
 BEFORE INSERT OR UPDATE ON Approves
 FOR EACH ROW EXECUTE FUNCTION block_resigned_employees();
 
+--
